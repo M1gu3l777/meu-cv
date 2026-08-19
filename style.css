@@ -1,0 +1,1343 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   VARIÁVEIS
+======================================== */
+
+:root {
+    --cor-principal: #2563eb;
+    --cor-principal-hover: #1d4ed8;
+    --cor-secundaria: #0f172a;
+
+    --cor-fundo: #f4f6f8;
+    --cor-card: #ffffff;
+
+    --cor-texto: #1f2937;
+    --cor-texto-secundario: #64748b;
+
+    --cor-borda: #e2e8f0;
+
+    --sombra:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+    --raio: 14px;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-principal);
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a
+        );
+
+    color: white;
+
+    padding: 60px 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-principal);
+
+    border: 4px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header h1 {
+    font-size: 42px;
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+}
+
+.role {
+    color: #cbd5e1;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   TEXTO AUXILIAR
+======================================== */
+
+.eyebrow {
+    color: #60a5fa;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ========================================
+   BOTÃO TEMA
+======================================== */
+
+.theme-button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.theme-button:hover {
+    background-color: var(--cor-principal);
+
+    transform: rotate(15deg);
+}
+
+
+/* ========================================
+   MENU DE NAVEGAÇÃO
+======================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background-color: white;
+
+    border-bottom: 1px solid var(--cor-borda);
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    min-height: 65px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    color: var(--cor-secundaria);
+}
+
+.logo span {
+    color: var(--cor-principal);
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #475569;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--cor-principal);
+}
+
+
+/* ========================================
+   BOTÃO MENU MOBILE
+======================================== */
+
+.menu-button {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--cor-secundaria);
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 60px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 50px;
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.section {
+    margin-bottom: 80px;
+
+    scroll-margin-top: 90px;
+}
+
+.section-heading {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.section-number {
+    color: var(--cor-principal);
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.section h2 {
+    color: var(--cor-secundaria);
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   FORMAÇÃO ACADÊMICA
+======================================== */
+
+.education-card {
+    position: relative;
+
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    padding: 35px;
+
+    box-shadow: var(--sombra);
+
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background-color: var(--cor-principal);
+}
+
+.education-date span,
+.status {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background-color: #dbeafe;
+
+    color: var(--cor-principal);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.education-content h3 {
+    font-size: 24px;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    color: var(--cor-secundaria);
+}
+
+.institution {
+    color: var(--cor-texto-secundario);
+
+    margin-bottom: 12px;
+}
+
+.period {
+    color: var(--cor-principal);
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.discipline-area {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.discipline-area h4 {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   TAGS
+======================================== */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.tags span {
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+    background-color: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   OBJETIVO PROFISSIONAL
+======================================== */
+
+.objective-card {
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: var(--raio);
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+
+    border: 1px solid #dbeafe;
+}
+
+.objective-card p {
+    color: var(--cor-texto);
+
+    font-size: 17px;
+}
+
+.objective-card strong {
+    color: var(--cor-principal);
+}
+
+.quote-mark {
+    position: absolute;
+
+    top: 5px;
+    left: 20px;
+
+    font-size: 60px;
+
+    color: #bfdbfe;
+}
+
+
+/* ========================================
+   EXPERIÊNCIA / TIMELINE
+======================================== */
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 30px;
+
+    border-left: 2px solid var(--cor-borda);
+}
+
+.timeline-marker {
+    position: absolute;
+
+    left: -7px;
+    top: 5px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-color: var(--cor-principal);
+
+    box-shadow:
+        0 0 0 5px #dbeafe;
+}
+
+.timeline-content h3 {
+    font-size: 21px;
+
+    margin-top: 12px;
+    margin-bottom: 5px;
+
+    color: var(--cor-secundaria);
+}
+
+.timeline-content ul {
+    margin-top: 15px;
+
+    padding-left: 20px;
+
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ========================================
+   HABILIDADES
+======================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.skill-category {
+    padding: 25px;
+
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+.skill-category h3 {
+    margin-bottom: 20px;
+
+    color: var(--cor-secundaria);
+}
+
+.skill {
+    margin-bottom: 18px;
+}
+
+.skill-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+}
+
+.skill-info span:last-child {
+    color: var(--cor-texto-secundario);
+}
+
+.skill-bar {
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #e2e8f0;
+}
+
+.skill-bar div {
+    height: 100%;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cor-principal),
+            #6366f1
+        );
+}
+
+
+/* ========================================
+   PROJETOS
+======================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 28px;
+
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--cor-principal);
+
+    box-shadow: var(--sombra);
+}
+
+.project-number {
+    color: var(--cor-principal);
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+.project-card h3 {
+    color: var(--cor-secundaria);
+
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+.project-link {
+    display: inline-block;
+
+    color: var(--cor-principal);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+}
+
+
+/* ========================================
+   IDIOMAS
+======================================== */
+
+.languages {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.language {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: 10px;
+}
+
+.language > div:first-child span {
+    display: block;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+.language-level {
+    display: flex;
+
+    gap: 5px;
+}
+
+.language-level span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #cbd5e1;
+}
+
+.language-level span.active {
+    background-color: var(--cor-principal);
+}
+
+
+/* ========================================
+   CURSOS
+======================================== */
+
+.empty-state {
+    padding: 40px;
+
+    text-align: center;
+
+    border: 2px dashed var(--cor-borda);
+
+    border-radius: var(--raio);
+}
+
+.empty-state > span {
+    color: var(--cor-principal);
+
+    font-size: 30px;
+}
+
+.empty-state h3 {
+    margin: 5px 0;
+}
+
+.empty-state p {
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ========================================
+   ATIVIDADES
+======================================== */
+
+.activity-list {
+    list-style: none;
+}
+
+.activity-list li {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.activity-list li span {
+    color: var(--cor-texto-secundario);
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.sidebar-card {
+    padding: 25px;
+
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+.sidebar-card h2 {
+    color: var(--cor-secundaria);
+
+    font-size: 22px;
+
+    margin: 8px 0;
+}
+
+.sidebar-card > p:not(.eyebrow) {
+    color: var(--cor-texto-secundario);
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ========================================
+   CONTATOS
+======================================== */
+
+.contact-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-list > a,
+.contact-list > div {
+    display: flex;
+
+    gap: 12px;
+
+    font-size: 13px;
+}
+
+.contact-list > a > span,
+.contact-list > div > span {
+    color: var(--cor-principal);
+
+    font-size: 18px;
+}
+
+.contact-list small {
+    display: block;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   REDES SOCIAIS
+======================================== */
+
+.social-card {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.social-card h3 {
+    color: var(--cor-secundaria);
+
+    margin-bottom: 5px;
+}
+
+.social-card a {
+    padding: 10px 0;
+
+    border-bottom: 1px solid var(--cor-borda);
+
+    color: var(--cor-texto-secundario);
+
+    font-weight: bold;
+}
+
+.social-card a:hover {
+    color: var(--cor-principal);
+}
+
+
+/* ========================================
+   DISPONIBILIDADE
+======================================== */
+
+.availability {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+}
+
+.availability-dot {
+    width: 10px;
+    height: 10px;
+
+    margin-top: 6px;
+
+    border-radius: 50%;
+
+    background-color: #22c55e;
+
+    box-shadow:
+        0 0 0 5px #dcfce7;
+}
+
+.availability strong {
+    font-size: 13px;
+}
+
+.availability p {
+    color: var(--cor-texto-secundario);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: var(--cor-secundaria);
+
+    color: white;
+
+    padding: 50px 20px 25px;
+}
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-content h2 {
+    font-size: 20px;
+}
+
+.footer-content p {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.footer-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+}
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #334155;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* ========================================
+   ANIMAÇÃO
+======================================== */
+
+.section {
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.section.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 950px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 45px 20px;
+    }
+
+    .header-content {
+        align-items: flex-start;
+    }
+
+    .profile {
+        gap: 15px;
+    }
+
+    .profile-photo {
+        width: 70px;
+        height: 70px;
+
+        font-size: 28px;
+    }
+    
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .certificate-card {
+    grid-template-columns: 1fr;
+}
+
+    .role {
+        font-size: 14px;
+    }
+
+
+    /* MENU MOBILE */
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px 20px;
+
+        background-color: white;
+
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+
+    .skills-grid,
+    .projects-grid,
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-content,
+    .copyright {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .profile-photo {
+        width: 55px;
+        height: 55px;
+
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .education-card,
+    .objective-card,
+    .skill-category,
+    .project-card {
+        padding: 22px;
+    }
+
+    .activity-list li {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .language {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+}
+
+/* ========================================
+   MODO ESCURO
+======================================== */
+
+body.dark {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark .navbar {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.dark .logo {
+    color: #f8fafc;
+}
+
+body.dark .nav-links a {
+    color: #cbd5e1;
+}
+
+body.dark .nav-links a:hover {
+    color: #60a5fa;
+}
+
+body.dark .education-card,
+body.dark .skill-category,
+body.dark .project-card,
+body.dark .sidebar-card,
+body.dark .language {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.dark .section h2,
+body.dark .education-content h3,
+body.dark .skill-category h3,
+body.dark .project-card h3,
+body.dark .sidebar-card h2,
+body.dark .sidebar-card h3 {
+    color: #f8fafc;
+}
+
+body.dark .institution,
+body.dark .project-card p,
+body.dark .timeline-content {
+    color: #94a3b8;
+}
+
+body.dark .tags span {
+    background-color: #334155;
+    color: #cbd5e1;
+}
+
+body.dark .skill-bar {
+    background-color: #334155;
+}
+
+body.dark .objective-card {
+    background: #172554;
+    border-color: #1e40af;
+}
+
+body.dark .objective-card p {
+    color: #e2e8f0;
+}
+
+body.dark .activity-list li {
+    border-color: #334155;
+}
+
+body.dark .social-card a {
+    color: #cbd5e1;
+    border-color: #334155;
+}
+
+body.dark .social-card a:hover {
+    color: #60a5fa;
+}
+
+body.dark .theme-button {
+    background-color: #334155;
+    color: white;
+}
+
+
+/* ========================================
+   CURSOS / CERTIFICAÇÕES
+======================================== */
+
+.course-card {
+    padding: 28px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    border-left: 5px solid var(--cor-principal);
+}
+
+.course-card h3 {
+    margin: 14px 0 8px;
+    color: var(--cor-secundaria);
+    font-size: 20px;
+}
+
+.course-card .institution {
+    margin-bottom: 6px;
+}
+
+.course-card .period {
+    margin-bottom: 12px;
+}
+
+body.dark .course-card {
+    background-color: #1e293b;
+    border-color: #334155;
+    border-left-color: var(--cor-principal);
+}
+
+body.dark .course-card h3 {
+    color: #f8fafc;
+}
+
+.timeline-secondary {
+    margin-top: 35px;
+}
+
+@media (max-width: 700px) {
+    body.dark .nav-links {
+        background-color: #1e293b;
+        border-color: #334155;
+    }
+
+    body.dark .nav-links li {
+        border-color: #334155;
+    }
+}
+
+/* ========================================
+   CERTIFICADO
+======================================== */
+
+.certificate-card {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 30px;
+
+    padding: 30px;
+
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra);
+}
+
+.certificate-content h3 {
+    color: var(--cor-secundaria);
+    font-size: 21px;
+    margin: 15px 0 8px;
+}
+
+.certificate-content .institution {
+    margin-bottom: 8px;
+}
+
+.certificate-content > p:not(.institution):not(.period) {
+    color: var(--cor-texto-secundario);
+}
+
+.certificate-image img {
+    width: 100%;
+    display: block;
+
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+
+    transition: 0.3s;
+}
+
+.certificate-image img:hover {
+    transform: scale(1.03);
+}
