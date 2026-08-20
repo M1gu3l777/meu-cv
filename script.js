@@ -1,7 +1,3 @@
-// ================================
-// MENU MOBILE
-// ================================
-
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
@@ -23,9 +19,6 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     });
 });
 
-// ================================
-// DARK MODE
-// ================================
 
 const themeButton = document.getElementById("themeButton");
 const savedTheme = localStorage.getItem("theme");
@@ -43,9 +36,7 @@ themeButton.addEventListener("click", () => {
     themeButton.textContent = darkMode ? "☀" : "☾";
 });
 
-// ================================
-// ANIMAÇÃO DAS SEÇÕES
-// ================================
+
 
 const sections = document.querySelectorAll(".section");
 
@@ -63,15 +54,9 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section));
 
-// ================================
-// ANO AUTOMÁTICO
-// ================================
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-// ================================
-// NAVEGAÇÃO ATIVA
-// ================================
 
 const navigationLinks = document.querySelectorAll(".nav-links a");
 const sectionsWithId = document.querySelectorAll("main section[id]");
