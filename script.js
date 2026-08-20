@@ -9,7 +9,6 @@ menuButton.addEventListener("click", () => {
     menuButton.textContent = isOpen ? "✕" : "☰";
 });
 
-// Fecha o menu ao clicar em um link
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -35,7 +34,6 @@ themeButton.addEventListener("click", () => {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
     themeButton.textContent = darkMode ? "☀" : "☾";
 });
-
 
 
 const sections = document.querySelectorAll(".section");
